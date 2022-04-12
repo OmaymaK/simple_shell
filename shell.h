@@ -1,0 +1,23 @@
+#ifndef SIMPLE_SHELL_H
+#define SIMPLE_SHELL_H
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+/*prototypes*/
+
+extern char **environ;
+int _putchar(char c);
+char *read_line(void);
+char **split_line(char *line);
+int execute_line(char **args);
+char *get_path(void);
+char **split_path(char *path);
+char *_strcat(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+int exit_shell(void);
+int print_env(void);
+#endif
